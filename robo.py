@@ -15,7 +15,7 @@ def coletar_dados():
 
 # Salvar em um CSV
 def salvar_relatorio(dados):
-    df = pd.DataFrame
+    df = pd.DataFrame(dados)
     df.to_csv("dados/relatorio.csv", index=False)
     print("Relatório salvo com sucesso!")
 
@@ -23,4 +23,5 @@ def salvar_relatorio(dados):
 if __name__ == "__main__":
     print("Iniciando Robô...")
     dados = coletar_dados()
+
     salvar_relatorio(dados)
